@@ -41,6 +41,8 @@ model.compile(optimizer=rmsprop,
               metrics=['accuracy'])
 model.fit(trX, trY, epochs=1, batch_size=20,validation_data=(valX,valY),callbacks=[metrics])
 print(metrics.val_precisions)
+print(metrics.val_recalls)
+
 # print('\nTesting ------------')
 # Evaluate the model with the metrics we defined earlier
 # loss, accuracy = model.evaluate(valX, valY)
